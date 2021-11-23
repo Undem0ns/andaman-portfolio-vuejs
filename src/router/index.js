@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
+
 import Home from '../views/Home.vue'
-import Portfolio from '../views/Portfolio.vue'
+import Facemask from '../views/MobileAppFaceMask.vue'
+import FPGMS from '../views/FPGMS.vue'
 
 const routes = [{
         path: '/',
@@ -8,13 +10,23 @@ const routes = [{
         component: Home
     },
     {
-        path: '/about',
-        name: 'About',
+        path: '/resume',
+        name: 'Resume',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
-            import ( /* webpackChunkName: "about" */ '../views/About.vue')
+            import ( /* webpackChunkName: "about" */ '../views/Resume.vue')
+    },
+    {
+        path: '/fpg-ms',
+        name: 'FPG-MS',
+        component: FPGMS
+    },
+    {
+        path: '/facemask',
+        name: 'Facemask',
+        component : Facemask
     },
 ]
 
